@@ -22,4 +22,6 @@ public class Aeroporto {
 	public Geo getLocal() {
 		return loc;
 	}
+
+    
 }

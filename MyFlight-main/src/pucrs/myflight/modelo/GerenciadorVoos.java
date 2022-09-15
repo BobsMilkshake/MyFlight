@@ -48,6 +48,11 @@ private int quantidadeDeVoos;
 
     public void listarEntidades(){
 
+        for(int i = 0; i < quantidadeDeVoos; i++){
+            //print("Origem: " + voos.get(i).getRota().getOrigem().getNome());
+
+            //printf("Destino: " + voos.get(i).getRota().getOrigem().getNome());
+        }
     }
 
 }

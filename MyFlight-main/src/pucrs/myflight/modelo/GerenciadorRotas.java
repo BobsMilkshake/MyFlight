@@ -16,17 +16,25 @@ public class GerenciadorRotas {
         quantidadeDeRotas++;
     }
 
-    public void removeEntidade(String origem){
-        
-        
+    public void removeEntidade(String origem, String destino){
+        for(int i = 0; i < quantidadeDeRotas; i++){
+            if(rotas.get(i).getDestino().getNome().compareTo(destino) == 0 && rotas.get(i).getOrigem().getNome().compareTo(origem) == 0){
+                rotas.remove(i);
+                quantidadeDeRotas--;
+            }
+        } 
     }
 
-    public Voo getEntidade(){
-
+    public Voo getEntidade(String origem, String destino){
+        for(int i = 0; i < quantidadeDeRotas; i++){
+            if(rotas.get(i).getDestino().getNome().compareTo(destino) == 0 && rotas.get(i).getOrigem().getNome().compareTo(origem) == 0){
+                rotas.get(i);
+            }
+        }
+        return null;
     }
 
-    public boolean procuraEntidade(){
+    public void listEntidades(){
 
     }
-
 }
