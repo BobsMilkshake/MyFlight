@@ -1,7 +1,7 @@
 package pucrs.myflight.modelo;
 import java.util.ArrayList;
 
-public class GerenciadorAeronaves {
+public class GerenciadorAeronaves implements Contavel {
 
     private ArrayList<Aeronave> frota;
     private int tamanhoFrota;
@@ -41,7 +41,7 @@ public class GerenciadorAeronaves {
         return false;
     }
 
-    public int tamanhoEntidade(){
+    public int quantidade(){
         return tamanhoFrota;
     }
 
