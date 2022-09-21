@@ -10,14 +10,28 @@ public class Geo {
 		this.longitude = longitude;
 	}
 	
+	/**
+	 * Retorna a latitude da localização
+	 * @return a latitude
+	 */
 	public double getLatitude() {
 		return latitude;
 	}
 	
+	/**
+	 * Retorna a longitude da localização
+	 * @return a longitude
+	 */
 	public double getLongitude() {
 		return longitude;
 	}
 
+	/**
+	 * Calcula a distancia entre dois pontos
+	 * @param geo1 ponto de partida
+	 * @param geo2 ponto de chegada
+	 * @return a distância entre os pontos
+	 */
 	public double distanciaEntrePontos(Geo geo1, Geo geo2){
 		// confirmar se esta certo
 		return 2 * r * Math.asin(Math.sqrt(Math.pow(Math.sin((geo1.getLatitude() + geo2.getLatitude()) / 2), 2) + Math.pow(Math.sin((geo1.getLongitude() + geo2.getLongitude()) /2) , 2)));

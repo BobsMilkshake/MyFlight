@@ -9,10 +9,18 @@ public class CiaAerea {
 		this.nome = nome;
 	}
 	
+	/**
+	 * Retorna o codigo da cia aerea
+	 * @return o codigo
+	 */
 	public String getCodigo() {
 		return codigo;
 	}
 	
+	/**
+	 * Retorna o nome da cia aerea
+	 * @return o nome
+	 */
 	public String getNome() {
 		return nome;
 	}	

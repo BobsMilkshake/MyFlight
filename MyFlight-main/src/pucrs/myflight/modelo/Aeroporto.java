@@ -11,14 +11,26 @@ public class Aeroporto implements Comparable<String> {
 		this.loc = loc;
 	}
 	
+	/**
+	 * Retorna o codigo do aeroporto
+	 * @return o codigo
+	 */
 	public String getCodigo() {
 		return codigo;
 	}
 	
+	/**
+	 * Retorna o nome do aeroporto
+	 * @return o nome
+	 */
 	public String getNome() {
 		return nome;
 	}
 	
+	/**
+	 * Retorna o local do aeroporto
+	 * @return o local
+	 */
 	public Geo getLocal() {
 		return loc;
 	}

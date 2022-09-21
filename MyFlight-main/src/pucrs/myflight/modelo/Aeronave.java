@@ -9,10 +9,18 @@ public class Aeronave {
 		this.descricao = descricao;
 	}
 	
+	/**
+	 * Retorna o codigo da aeronave
+	 * @return o codigo
+	 */
 	public String getCodigo() {
 		return codigo;
 	}
 	
+	/**
+	 * Retorna a descrição da aeronave
+	 * @return a descrição
+	 */
 	public String getDescricao() {
 		return descricao;
 	}

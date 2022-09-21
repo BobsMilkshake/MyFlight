@@ -13,18 +13,34 @@ public class Rota implements Comparable<Rota> {
 		this.aeronave = aeronave;		
 	}	
 	
+	/**
+	 * Retorna a cia aerea da rota
+	 * @return a cia aerea
+	 */
 	public CiaAerea getCia() {
 		return cia;
 	}
 	
+	/**
+	 * Retorna o destino da rota
+	 * @return o destino
+	 */
 	public Aeroporto getDestino() {
 		return destino;
 	}
 	
+	/**
+	 * Retorna a origem da rota
+	 * @return a origem
+	 */
 	public Aeroporto getOrigem() {
 		return origem;
 	}
 	
+	/**
+	 * Retorna a aeronave da rota
+	 * @return a aeronave
+	 */
 	public Aeronave getAeronave() {
 		return aeronave;
 	}

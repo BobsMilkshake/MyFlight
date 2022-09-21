@@ -27,22 +27,41 @@ public class Voo {
 
 	}
 	
+	/**
+	 * Retorna a rota do voo
+	 * @return a rota
+	 */
 	public Rota getRota() {
 		return rota;
 	}
 	
+	/**
+	 * Retorna a data e hora do voo
+	 * @return a data e hora
+	 */
 	public LocalDateTime getDatahora() {
 		return datahora;
 	}
 	
+	/**
+	 * Retorna a duração do voo
+	 * @return a duração
+	 */
 	public Duration getDuracao() {
 		return duracao;
 	}
 	
+	/**
+	 * Retorna o status do voo
+	 * @return o status
+	 */
 	public Status getStatus() {
 		return status;
 	}
 	
+	/**
+	 * Determina o status do voo
+	 */
 	public void setStatus(Status novo) {
 		this.status = novo;
 	}
