@@ -12,11 +12,11 @@ public class Voo {
 	private Rota rota;
 	private Status status;
 	
-	public Voo(Rota rota, LocalDateTime datahora, Duration duracao) {
+	public Voo(Rota rota, LocalDateTime datahora, Duration duracao, Status status) {
 		this.rota = rota;
 		this.datahora = datahora;
 		this.duracao = duracao;
-		this.status = Status.CONFIRMADO; 
+		this.status = status; 
 	}
 
 	public Voo(Rota rota, Duration duracao){
