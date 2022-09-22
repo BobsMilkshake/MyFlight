@@ -34,7 +34,12 @@ public class Geo {
 	 */
 	public double distanciaEntrePontos(Geo geo1, Geo geo2){
 		// confirmar se esta certo
-		return 2 * r * Math.asin(Math.sqrt(Math.pow(Math.sin((geo1.getLatitude() + geo2.getLatitude()) / 2), 2) + Math.pow(Math.sin((geo1.getLongitude() + geo2.getLongitude()) /2) , 2)));
+		lat1 = Math.toRadians(geo1.getLatitude());
+		lat2 = Math.toRadians(geo2.getLatitude());
+		lon1 = Math.toRadians(geo1.getLongitude());
+		lon2 = Math.toRadians(geo2.getLongitude());
+		return 2 * r * Math.asin(Math.sqrt(Math.pow(Math.sin((lat1 + lat2) / 2), 2)
+						   + Math.pow(Math.sin((lon1 + lon2) /2) , 2)) * Math.cos(lat1) * Math.cos(lat2));
 		
 	}
 }
