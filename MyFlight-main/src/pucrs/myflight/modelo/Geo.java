@@ -32,7 +32,7 @@ public class Geo {
 	 * @param geo2 ponto de chegada
 	 * @return a distância entre os pontos
 	 */
-	public double distanciaEntrePontos(Geo geo1, Geo geo2){
+	public double distancia(Geo geo1, Geo geo2){
 		// confirmar se esta certo
 		double lat1 = Math.toRadians(geo1.getLatitude());
 		double lat2 = Math.toRadians(geo2.getLatitude());
@@ -41,5 +41,15 @@ public class Geo {
 		return 2 * r * Math.asin(Math.sqrt(Math.pow(Math.sin((lat1 + lat2) / 2), 2)
 						   + Math.pow(Math.sin((lon1 + lon2) /2) , 2)) * Math.cos(lat1) * Math.cos(lat2));
 		
+	}
+	
+	/**
+	 * Calcula a distância entre essa localização e a outra do método anterior
+	 * @param outra localização atual a ser calculada
+	 * @return a nova distância entre pontos
+	 */
+	public double distancia(Geo outra) {
+		Geo obj = new Geo(getLatitude(), getLongitude());
+        	return distancia(obj, outra);
 	}
 }
