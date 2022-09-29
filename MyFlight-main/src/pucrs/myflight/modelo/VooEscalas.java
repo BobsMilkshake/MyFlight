@@ -25,10 +25,15 @@ public class VooEscalas extends VooAbstrata {
         
         LocalTime inicio = LocalTime.of(0,0,0);
         LocalTime fim = LocalTime.of(0, 0, 0);
-        long temp = (long)Geo.distancia(aux1, aux2)/805;
+        long distance = (long) aux1.distancia(aux2);
+        long hours = (distance / 805);
+        long minutes = ((distance & 805));
+        //long temp = (long)Geo.distancia(aux1, aux2)/805;
         Duration duracao = Duration.between(inicio, fim);
-        duracao.plusHours(temp);
-        duracao.plusMinutes(30);
+        duracao.plusHours(hours);
+        duracao.plusMinutes(minutes + 30);
+        //duracao.plusHours(temp);
+        //duracao.plusMinutes(30);
         
         return duracao;  
     }

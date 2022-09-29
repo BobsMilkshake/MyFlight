@@ -38,7 +38,7 @@ public class App {
 		LocalDateTime ldt1 = LocalDateTime.now().plusDays(1).plusMonths(2).plusHours(3);
 		VooEscalas teste1 = new VooEscalas(ldt1);
 		teste1.adicionaRota(gruPoa);
-		System.out.println(teste1.getDuracao());
+		System.out.println(teste1.getDuracao().toString());
 
 
 	}

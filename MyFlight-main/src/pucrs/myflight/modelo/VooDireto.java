@@ -13,7 +13,9 @@ public class VooDireto extends VooAbstrata {
 
     @Override
     public Duration getDuracao() {
-        return;
+
+        
+        return null;
         //fazer o calculo em casa
     }
 
