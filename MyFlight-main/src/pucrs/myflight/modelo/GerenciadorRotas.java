@@ -58,7 +58,7 @@ public class GerenciadorRotas {
     /**
      * Ordena a lista de rotas pelo nome da cia
      */
-    public void ordenaCiaNome(){
+    public void sortRotas(){
         Collections.sort(rotas);
     }
 }

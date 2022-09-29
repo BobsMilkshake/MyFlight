@@ -33,15 +33,22 @@ public class Geo {
 	 * @return a distância entre os pontos
 	 */
 	public double distancia(Geo geo1, Geo geo2){
-		// confirmar se esta certo
 		double lat1 = Math.toRadians(geo1.getLatitude());
-		double lat2 = Math.toRadians(geo2.getLatitude());
-		double lon1 = Math.toRadians(geo1.getLongitude());
-		double lon2 = Math.toRadians(geo2.getLongitude());
-		return 2 * r * Math.asin(Math.sqrt(Math.pow(Math.sin((lat1 + lat2) / 2), 2)
-						   + Math.pow(Math.sin((lon1 + lon2) /2) , 2)) * Math.cos(lat1) * Math.cos(lat2));
-		
-	}
+        double lat2 = Math.toRadians(geo2.getLatitude());
+        double lon1 = Math.toRadians(geo1.getLongitude());
+        double lon2 = Math.toRadians(geo2.getLongitude());
+        
+        double diflat = (lat1-lat2)/2;
+        double diflon = (lon1-lon2)/2;
+        
+        double d = Math.pow(Math.sin(diflat),2)+
+                   Math.pow(Math.sin(diflon),2)*
+                   Math.cos(lat1) * Math.cos(lat2);
+        
+        d = 2 * 6371 * Math.asin(Math.sqrt(d));
+                
+        return d;
+	}   
 	
 	/**
 	 * Calcula a distância entre essa localização e a outra do método anterior

@@ -68,10 +68,9 @@ public class GerenciadorAeroportos {
     public int tamanhoEntidade(){
         return quantidadeAeroportos;
     }
-        
-    public void listarEntidades(){
-        
-    }    
-
+   
+    public void sortAeroportos() {
+        Collections.sort(aeroportos);
+    }
 
 }
