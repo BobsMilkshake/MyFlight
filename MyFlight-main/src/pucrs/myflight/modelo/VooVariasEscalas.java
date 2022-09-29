@@ -2,37 +2,22 @@ package pucrs.myflight.modelo;
 
 import java.time.Duration;
 import java.time.LocalDateTime;
-import java.util.ArrayList;
 
-public class VooVariasEscalas extends Voo {
+public class VooDireto extends VooAbstrata {
+    private Rota rota;
+    private Duration duracao;
 
-    private ArrayList<Rota> listVoos;
-    private int size;
-
-    public VooVariasEscalas(Rota rotaInicial, LocalDateTime datahora, Duration duracao, Status status) {
-        super(rotaInicial, datahora, duracao, status);
-
-        ArrayList<Rota> listVoos = new ArrayList<Rota>();
-        listVoos.add(rotaInicial);
-        size = 1;
+    public VooDireto(LocalDateTime dh, Rota rota, Duration duracao) {
+        super(dh, duracao);
+        this.rota = rota;      
     }
 
-    public void addRota(Rota rota){
-        listVoos.add(rota);
-        size++;
+    public Duration getDuracao() {
+        return duracao;
     }
 
-    public void removeRotaByIndex(int index){
-        listVoos.remove(index);
-        size--;
+    public Rota getRota() {
+        return rota;
     }
-
-    public void removeRotaByObject(Rota rota){
-        listVoos.remove(rota);
-        size--;
-    }
-
-    public int quantRotas(){
-        return size;
-    }
+    
 }
