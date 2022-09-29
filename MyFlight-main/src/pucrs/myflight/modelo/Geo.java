@@ -32,7 +32,7 @@ public class Geo {
 	 * @param geo2 ponto de chegada
 	 * @return a distância entre os pontos
 	 */
-	public double distancia(Geo geo1, Geo geo2){
+	public static double distancia(Geo geo1, Geo geo2){
 		double lat1 = Math.toRadians(geo1.getLatitude());
         double lat2 = Math.toRadians(geo2.getLatitude());
         double lon1 = Math.toRadians(geo1.getLongitude());
