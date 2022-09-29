@@ -42,6 +42,7 @@ public class VooEscalas extends VooAbstrata {
         return d;
 	}   
 
+    @Override
     public Duration getDuracao() {
         Geo aux1 = routes.get(0).getOrigem().getLocal();
         Geo aux2 = routes.get(0).getDestino().getLocal();
@@ -56,6 +57,7 @@ public class VooEscalas extends VooAbstrata {
         return duracao;  
     }
 
+    @Override
     public Rota getRota() {
         return routes.get(0);  
     }

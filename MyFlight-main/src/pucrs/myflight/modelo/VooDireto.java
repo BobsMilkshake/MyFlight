@@ -11,11 +11,13 @@ public class VooDireto extends VooAbstrata {
         this.rota = rota;      
     }
 
+    @Override
     public Duration getDuracao() {
         return;
         //fazer o calculo em casa
     }
 
+    @Override
     public Rota getRota() {
         return rota;
     }
