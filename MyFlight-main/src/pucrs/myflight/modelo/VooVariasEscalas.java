@@ -7,13 +7,14 @@ public class VooDireto extends VooAbstrata {
     private Rota rota;
     private Duration duracao;
 
-    public VooDireto(LocalDateTime dh, Rota rota, Duration duracao) {
-        super(dh, duracao);
+    public VooDireto(LocalDateTime dh, Rota rota) {
+        super(dh);
         this.rota = rota;      
     }
 
     public Duration getDuracao() {
-        return duracao;
+        return;
+        //fazer o calculo em casa
     }
 
     public Rota getRota() {
