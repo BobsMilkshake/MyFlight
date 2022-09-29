@@ -7,10 +7,9 @@ import java.util.ArrayList;
 public class VooEscalas extends VooAbstrata {
 
     private ArrayList<Rota> routes;
-    private Duration duracao;
 
-    public VooEscalas(LocalDateTime dh, Duration duracao) {
-        super(dh, duracao);
+    public VooEscalas(LocalDateTime dh) {
+        super(dh);
     }
     
     public void adicionaRota(Rota rota) {
@@ -18,7 +17,8 @@ public class VooEscalas extends VooAbstrata {
     }
 
     public Duration getDuracao() {
-        return duracao;
+        return;
+        //fazer o calculo quando chegar em casa
     }
 
     public Rota getRota() {
