@@ -7,27 +7,40 @@ public class GerenciadorVoos {
 private ArrayList<Voo> voos;
 private int quantidadeDeVoos;
 
-    GerenciadorVoos(Voo voo){
+    GerenciadorVoos(VooDireto vooDi){
         ArrayList<Voo> voos = new ArrayList<>();
-        voos.add(voo);
+        voos.add(vooDi);
         quantidadeDeVoos = 1;
+    }
+
+    GerenciadorVoos (VooEscalas vooEs) {
+        voos.add(vooEs);
+        quantidadeDeVoos = 1;
+    }
+
+    /**
+     * Adiciona um voo a lista
+     * @param vooDi objeto voo a ser adicionado
+     */
+    public void addVoo(VooDireto vooDi){
+        voos.add(vooDi);
+        quantidadeDeVoos++;
     }
 
     /**
      * Adiciona um voo a lista
      * @param voo objeto voo a ser adicionado
      */
-    public void addEntidade(Voo voo){
-        voos.add(voo);
+    public void addVoo(VooEscalas vooEs){
+        voos.add(vooEs);
         quantidadeDeVoos++;
-
     }
 
     /**
      * Remove voo da lista
      * @param date data do voo
      */
-    public void removeEntidade(LocalDateTime date){
+    public void removeVoo(LocalDateTime date){
         for(int i = 0; i < quantidadeDeVoos; i++){
             if(voos.get(i).getDatahora().compareTo(date) == 0){
                 voos.remove(i);
@@ -40,7 +53,7 @@ private int quantidadeDeVoos;
      * Retorna o objeto voo pesquisado
      * @return o voo encontrado ou null caso ele não existir
      */
-    public Voo getEntidade(LocalDateTime date){
+    public Voo getData(LocalDateTime date){
         for(int i = 0; i < quantidadeDeVoos; i++){
             if(voos.get(i).getDatahora().compareTo(date) == 0) return voos.get(i);
         }
@@ -52,7 +65,7 @@ private int quantidadeDeVoos;
      * @param date data do voo
      * @return retorna true caso ele tenha sido encontrado e falso caso não tenha sido encontrado
      */
-    public boolean procuraEntidade(LocalDateTime date){
+    public boolean procuraData(LocalDateTime date){
         for(int i = 0; i < quantidadeDeVoos; i++){
             if(voos.get(i).getDatahora().compareTo(date) == 0) return true;
         }
@@ -60,19 +73,22 @@ private int quantidadeDeVoos;
     }
 
     /**
-     * Quantidade de coos presentes na lista
+     * Quantidade de voos presentes na lista
      * @return a quantidade de voos
      */
-    public int tamanhoEntidade(){
+    public int tamanhoLista(){
         return quantidadeDeVoos;
     }
 
+    /**
+     * Lista as entidades do array
+     */
     public void listarEntidades(){
 
         for(int i = 0; i < quantidadeDeVoos; i++){
-            //print("Origem: " + voos.get(i).getRota().getOrigem().getNome());
+            Systam.out.println("Origem: " + voos.get(i).getRota().getOrigem().getNome());
 
-            //printf("Destino: " + voos.get(i).getRota().getOrigem().getNome());
+            Systam.out.println("Destino: " + voos.get(i).getRota().getOrigem().getNome());
         }
     }
 

@@ -1,6 +1,9 @@
-package pucrs.myflight.modelo;
+
 
 import java.time.LocalDateTime;
+
+import pucrs.myflight.modelo.*;
+
 
 public class App {
 

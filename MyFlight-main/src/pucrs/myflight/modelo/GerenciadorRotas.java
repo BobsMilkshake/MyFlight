@@ -17,7 +17,7 @@ public class GerenciadorRotas {
      * Adiciona uma rota a lista
      * @param rota objeto rota a ser adicionado
      */
-    public void addEntidade(Rota rota){
+    public void addRota(Rota rota){
         rotas.add(rota);
         quantidadeDeRotas++;
     }
@@ -27,7 +27,7 @@ public class GerenciadorRotas {
      * @param origem origem da rota
      * @param destino destino da rota
      */
-    public void removeEntidade(String origem, String destino){
+    public void removeRota(String origem, String destino){
         for(int i = 0; i < quantidadeDeRotas; i++){
             if(rotas.get(i).getDestino().getNome().compareTo(destino) == 0 && rotas.get(i).getOrigem().getNome().compareTo(origem) == 0){
                 rotas.remove(i);
@@ -42,7 +42,7 @@ public class GerenciadorRotas {
      * @param destino destino da rota pesquisada
      * @return o objeto rota caso ele tenha sido encontrado ou null caso ele não tenha sido encontrado
      */
-    public Voo getEntidade(String origem, String destino){
+    public Voo getRota(String origem, String destino){
         for(int i = 0; i < quantidadeDeRotas; i++){
             if(rotas.get(i).getDestino().getNome().compareTo(destino) == 0 && rotas.get(i).getOrigem().getNome().compareTo(origem) == 0){
                 rotas.get(i);
@@ -51,8 +51,10 @@ public class GerenciadorRotas {
         return null;
     }
 
-    public void listEntidades(){
-
+    public void listRota(){
+        for (int i = 0; i < quantidadeDeRotas; i++) {
+            System.out.println(rotas.get(i));
+        }
     }
 
     /**
