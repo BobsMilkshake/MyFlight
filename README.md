@@ -13,6 +13,6 @@
   Como suporte para as outras classes de entidade e gerencia, nós temos as classes VooAbstrato e Contavel. VooAbstrato é a classe na qual Voo, VooDireto e VooEscalas vão herdar, facilitando a implementação delas. Contavel é a interface implementada por Aeroporto, que possui um método de retornar a quantidade de entidades instanciadas.
   
  ## Membros do projeto
-gabicolares
+gabicolares &
 BobsMilkshake
 
