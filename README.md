@@ -1,18 +1,14 @@
-## Getting Started
+## MyFlight
+ Programa fictício de gerenciamento rotas, aeroportos, aeronaves e voos.
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
 
-## Folder Structure
+## Sistema de classes e gerência
+  O programa MyFlight possui 5 entidades de classe, Aeronave, Aeroporto, CiaAerea, Rota e Voo, sendo VooDireto e VooEscalas subclasses de Voo. Para cada classe de entidade existe uma classe que à gerencia, com métodos de adicionar, retirar, procurar, organizar e entre outros, métodos que server para manipular a estrutura da dados sobre essas entidades.
+  
+  ## Classe App
+    Classe App é uma classe de instâncias de objetos de classe.
+    
+  ## Classes abstratas e interfaces
+    Como suporte para as outras classes de entidade e gerencia, nós temos as classes VooAbstrato e Contavel. VooAbstrato é a classe na qual Voo, VooDireto e VooEscalas vão herdar, facilitando a implementação delas. Contavel é a interface implementada por Aeroporto, que possui um método de retornar a quantidade de entidades instanciadas.
 
-The workspace contains two folders by default, where:
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
