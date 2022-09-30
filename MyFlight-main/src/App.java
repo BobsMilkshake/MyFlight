@@ -1,4 +1,9 @@
-package pucrs.myflight.consoleApp;
+
+
+import java.time.LocalDateTime;
+
+import pucrs.myflight.modelo.*;
+
 
 public class App {
 
@@ -32,6 +37,12 @@ public class App {
 		Rota gruPoa = new Rota(gol, guarulhos, salgadoFilho, a4);
 		Rota poaGru = new Rota(gol ,salgadoFilho, guarulhos, a3);
 		Rota miaLis = new Rota(tap, miami, lisboa, a1);
+
+		LocalDateTime ldt1 = LocalDateTime.now().plusDays(1).plusMonths(2).plusHours(3);
+		VooEscalas teste1 = new VooEscalas(ldt1);
+		teste1.adicionaRota(gruPoa);
+		System.out.println(teste1.getDuracao().toString());
+
 
 	}
 }

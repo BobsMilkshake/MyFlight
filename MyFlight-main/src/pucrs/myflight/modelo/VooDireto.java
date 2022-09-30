@@ -2,22 +2,15 @@ package pucrs.myflight.modelo;
 
 import java.time.Duration;
 import java.time.LocalDateTime;
-import java.time.LocalTime;
-import java.util.ArrayList;
 
-public class VooEscalas extends VooAbstrata {
-
-    private ArrayList<Rota> routes;
+public class VooDireto extends VooAbstrata {
+    private Rota rota;
     private LocalDateTime dh;
     private Status status;
 
-    public VooEscalas(LocalDateTime dh, Status status) {
+    public VooDireto(LocalDateTime dh, Rota rota, Status status) {
         super(dh, status);
-        routes = new ArrayList<>();
-    }
-    
-    public void adicionaRota(Rota rota) {
-        routes.add(rota);
+        this.rota = rota;      
     }
 
     @Override
@@ -42,10 +35,7 @@ public class VooEscalas extends VooAbstrata {
 
     @Override
     public Rota getRota() {
-        return routes.get(0);  
+        return rota;
     }
-
-    public ArrayList<Rota> getRotas() {
-        return routes;
-    }
+    
 }
