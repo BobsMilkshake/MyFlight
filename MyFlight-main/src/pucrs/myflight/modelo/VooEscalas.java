@@ -8,9 +8,11 @@ import java.util.ArrayList;
 public class VooEscalas extends VooAbstrata {
 
     private ArrayList<Rota> routes;
+    private LocalDateTime dh;
+    private Status status;
 
-    public VooEscalas(LocalDateTime dh) {
-        super(dh);
+    public VooEscalas(LocalDateTime dh, Status status) {
+        super(dh, status);
         routes = new ArrayList<>();
     }
     
